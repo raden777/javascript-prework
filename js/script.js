@@ -34,11 +34,11 @@ function displayResult(argPlayerMove, argComputerMove) {
       ', ' +
       argComputerMove
   );
-  if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
-    printMessage('Wygrywasz!');
-  } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
-    printMessage('Wygrywasz!');
-  } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
+  if (
+    (argPlayerMove == 'papier' && argComputerMove == 'kamień') ||
+    (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') ||
+    (argPlayerMove == 'nożyce' && argComputerMove == 'papier')
+  ) {
     printMessage('Wygrywasz!');
   } else if (argPlayerMove == argComputerMove) {
     printMessage('Remis!');
